@@ -16,9 +16,9 @@ pub fn sol_to_lamports(sol: f64) -> u64 {
 }
 
 use std::fmt::{Debug, Display, Formatter, Result};
-pub struct Sol(pub u64);
+pub struct Mik(pub u64);
 
-impl Sol {
+impl Mik {
     fn write_in_sol(&self, f: &mut Formatter) -> Result {
         write!(
             f,
@@ -29,13 +29,13 @@ impl Sol {
     }
 }
 
-impl Display for Sol {
+impl Display for Mik {
     fn fmt(&self, f: &mut Formatter) -> Result {
         self.write_in_sol(f)
     }
 }
 
-impl Debug for Sol {
+impl Debug for Mik {
     fn fmt(&self, f: &mut Formatter) -> Result {
         self.write_in_sol(f)
     }
